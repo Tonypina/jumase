@@ -1,0 +1,63 @@
+@import './variables';
+@import './extentions/all';
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar {
+    .navbar-brand {
+        img {
+            height: 5.5vh;
+            max-height: 5.5vh;
+        }
+
+    }
+    
+    .navbar-item {
+        &:hover{
+            background-color: hsl(0deg, 0%, 21%) !important;
+        }
+    }
+    
+    
+    .navbar-menu {
+        .navbar-link {
+            height: 100%;
+            
+            a {
+                color: whitesmoke;
+            }
+
+            &::after {
+                display: none;
+            }
+            
+            &:hover {
+                background-color: hsl(0deg, 0%, 21%) !important;
+            }
+            
+            &:focus-within {
+                background-color: hsl(0deg, 0%, 21%) !important;
+            }
+        }
+    }
+    
+    .navbar-end {
+        p:first-child {
+            font-size: 1.10rem ;
+            letter-spacing: 1.3px;
+        }
+        
+        p:nth-child(2) {
+            font-size: 0.7rem;
+        }
+    }
+}
+
+
+.nuxt-link-active {
+    color: $orange !important;
+}
