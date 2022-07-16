@@ -13,51 +13,74 @@
             height: 5.5vh;
             max-height: 5.5vh;
         }
-
     }
-    
-    .navbar-item {
-        &:hover{
-            background-color: hsl(0deg, 0%, 21%) !important;
-        }
-    }
-    
     
     .navbar-menu {
-        .navbar-link {
-            height: 100%;
-            
-            a {
-                color: whitesmoke;
+        .navbar-start {
+            .navbar-item {
+                &.is-mega {
+                    position: static;
+    
+                    .is-mega-menu-title {
+                        margin-bottom: 0;
+                        padding: .375rem 1rem;
+                    }
+                }
+        
+                &:hover{
+                    background-color: hsl(0deg, 0%, 21%) !important;
+        
+                    a {
+                        color: $orange !important;
+                        transition: 0.2s;
+                    }
+                }
             }
 
-            &::after {
-                display: none;
+            
+            .navbar-link {
+                height: 100%;
+                
+                a {
+                    color: whitesmoke;
+                }
+    
+                & > .navbar-item {
+                    height: 100%;
+                    align-items: center;
+                }
+
+                &::after {
+                    display: none;
+                }
+                
+                &:hover {
+                    background-color: hsl(0deg, 0%, 21%) !important;
+                }
+                
+                a:focus {
+                    background-color: hsl(0deg, 0%, 21%) !important;
+                }
+    
+                &:focus-within {
+                    background-color: hsl(0deg, 0%, 21%) !important;
+                }
+            }
+        }
+
+        .navbar-end {
+            p:first-child {
+                font-size: 1.10rem ;
+                letter-spacing: 1.3px;
             }
             
-            &:hover {
-                background-color: hsl(0deg, 0%, 21%) !important;
-            }
-            
-            &:focus-within {
-                background-color: hsl(0deg, 0%, 21%) !important;
+            p:nth-child(2) {
+                font-size: 0.7rem;
             }
         }
     }
     
-    .navbar-end {
-        p:first-child {
-            font-size: 1.10rem ;
-            letter-spacing: 1.3px;
-        }
-        
-        p:nth-child(2) {
-            font-size: 0.7rem;
-        }
+    .nuxt-link-active {
+        color: $orange !important;
     }
-}
-
-
-.nuxt-link-active {
-    color: $orange !important;
 }

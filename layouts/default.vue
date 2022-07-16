@@ -16,15 +16,16 @@
       <div class="navbar-menu">
         <div class="navbar-start ml-6 pl-6">
 
-          <div v-for="(link, key) of navbar_links" :key="key">
+          <div v-for="(link, key) of navbar_links" :key="key" class="navbar-link pl-3 py-0">
 
-            <div class="navbar-link pl-3">
+            <!-- <div class="navbar-link pl-3"> -->
 
-              <div v-if="link.title === 'Servicios' || link.title === 'Productos'">
-                <div class="navbar-item has-dropdown is-hoverable is-mega">
-                  <div class="navbar-link flex">
+              <div v-if="link.title === 'Servicios' || link.title === 'Productos'" class="navbar-item is-hoverable has-dropdown is-mega">
+                <!-- <div class="navbar-item is-hoverable has-dropdown is-mega"> -->
+
+                  <NuxtLink :to="link.to" exact-active-class="is-active" class="pr-3">
                     {{ link.title }}
-                  </div>
+                  </NuxtLink>
 
                   <div class="navbar-dropdown">
                     <div class="container is-fluid">
@@ -46,18 +47,18 @@
                     </div>
                   </div>
 
-                </div>
+                <!-- </div> -->
               </div>
 
-              <div v-else>
-                <div class="navbar-item">
+              <div v-else class="navbar-item">
+                <!-- <div class="navbar-item"> -->
                   <NuxtLink :to="link.to" exact-active-class="is-active">
                     {{ link.title }}
                   </NuxtLink>
-                </div>
+                <!-- </div> -->
               </div>
 
-            </div>
+            <!-- </div> -->
 
           </div>
 
@@ -89,7 +90,7 @@
         navbar_links: [{
             title: 'Inicio',
             to: {
-              name: 'index'
+              name: 'inicio'
             },
           },
           {
