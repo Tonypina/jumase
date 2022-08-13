@@ -14,12 +14,19 @@
     "test": "jest"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.1.2",
+    "@fortawesome/free-brands-svg-icons": "^6.1.2",
+    "@fortawesome/free-regular-svg-icons": "^6.1.2",
+    "@fortawesome/free-solid-svg-icons": "^6.1.2",
+    "@fortawesome/vue-fontawesome": "^2.0.8",
+    "@nuxtjs/fontawesome": "^1.1.2",
     "core-js": "^3.19.3",
     "nuxt": "^2.15.8",
     "nuxt-buefy": "^0.4.13",
-    "vue": "^2.6.14",
+    "vue": "^2.7.8",
+    "vue-material-design-icons": "^5.1.2",
     "vue-server-renderer": "^2.6.14",
-    "vue-template-compiler": "^2.6.14",
+    "vue-template-compiler": "^2.7.8",
     "webpack": "^4.46.0"
   },
   "devDependencies": {
