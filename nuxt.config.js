@@ -3,9 +3,9 @@ import { resolve } from "path"
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'jumase',
+    title: 'JUMASE Informática',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'es',
     },
     meta: [
       { charset: 'utf-8' },
@@ -13,7 +13,7 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/icon.ico' }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -28,7 +28,9 @@ export default {
   },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+    // '~/plugins/fontawesome.js',
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -37,7 +39,18 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
+    '@nuxtjs/fontawesome',
   ],
+
+  fontawesome: {
+    component: 'fa',
+    suffix: true,
+    icons: {
+      solid: true,
+      brands: true,
+      regular: true,
+    }
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
